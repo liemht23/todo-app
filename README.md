@@ -10,6 +10,13 @@ Install dependencies:
 npm install
 ```
 
+This project requires **Node.js 20.11.1** or later. If you use `nvm`, you can run:
+
+```bash
+nvm install 20.11.1
+nvm use 20.11.1
+```
+
 Run a local server to view the app:
 
 ```bash
