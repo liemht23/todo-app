@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=20.11.1"
+  },
   "jest": {
     "testEnvironment": "jsdom"
   },
