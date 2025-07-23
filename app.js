@@ -1,3 +1,7 @@
+const React = typeof require === 'function' ? require('react') : window.React;
+const ReactDOM = typeof require === 'function'
+  ? require('react-dom/client')
+  : window.ReactDOM;
 const { useState } = React;
 
 function TodoApp() {
@@ -48,4 +52,15 @@ function TodoApp() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(TodoApp));
+if (typeof document !== 'undefined') {
+  const rootEl = document.getElementById('root');
+  if (rootEl) {
+    ReactDOM.createRoot(rootEl).render(
+      React.createElement(TodoApp)
+    );
+  }
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { TodoApp };
+}
