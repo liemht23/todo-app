@@ -24,3 +24,16 @@ npm start
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Deploying to Vercel
+
+You can deploy the app as a static site with the Vercel CLI:
+
+```bash
+npm install
+npx vercel --prod
+```
+
+When prompted, choose **Other** as the framework and leave the build command
+empty. Set the output directory to `.` (the project root). Vercel will then
+host `index.html` and `app.js` directly.
